@@ -3,6 +3,10 @@ import 'dart:convert';
 import 'package:apipractice/export_all.dart';
 import 'package:http/http.dart' as http;
 
+
+// This is the example of getting simple json data form unnamed 
+//array using modal (with custom selection)in UI list    
+
 class GetApiTwoScreen extends StatefulWidget {
   const GetApiTwoScreen({super.key});
 
@@ -39,6 +43,7 @@ class _GetApiTwoScreenState extends State<GetApiTwoScreen> {
           builder: (context, AsyncSnapshot<List<Photos>> snapshot) {
             if (!snapshot.hasData) {
               return Center(
+                
                 child: Text('Loading ...'),
               );
             } else {

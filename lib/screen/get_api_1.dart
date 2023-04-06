@@ -3,6 +3,9 @@ import 'dart:convert';
 import 'package:apipractice/export_all.dart';
 import 'package:http/http.dart' as http;
 
+// This is the example of getting simple json data form unnamed
+//array using modal in UI list
+
 class GetApiOneScreen extends StatefulWidget {
   const GetApiOneScreen({super.key});
 
@@ -54,6 +57,7 @@ class _GetApiOneScreenState extends State<GetApiOneScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
+                            // snapshot.data![index].id.toString(),
                             postList[index].id.toString(),
                             style: TextStyle(
                                 fontSize: 12,

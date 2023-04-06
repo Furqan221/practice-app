@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Api Practice',
-      home: HomeScreen(),
+      home: IndexScreen(),
     );
   }
 }
-
