@@ -6,6 +6,7 @@ export 'package:apipractice/screen/get_api_1.dart';
 export 'package:apipractice/screen/get_api_2.dart';
 export 'package:apipractice/screen/get_api_3.dart';
 export 'package:apipractice/screen/post_api_1.dart';
+export 'package:apipractice/screen/post_api_2.dart';
 export 'package:apipractice/screen/home_screen.dart';
 
 // Packages

@@ -12,10 +12,28 @@ class IndexScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: [
-          ButtonWidget1(text: 'Get Api 1', onTap: GetApiOneScreen()),
-          ButtonWidget1(text: 'Get Api 2', onTap: GetApiTwoScreen()),
-          ButtonWidget1(text: 'Get Api 3', onTap: GetApiThreeScreen()),
-          ButtonWidget1(text: 'Post Api 1', onTap: PostApiOneScreen()),
+          ButtonWidget1(
+              text: 'Get Api 1',
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => GetApiOneScreen()))),
+          ButtonWidget1(
+              text: 'Get Api 2',
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => GetApiTwoScreen()))),
+          ButtonWidget1(
+              text: 'Get Api 3',
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => GetApiThreeScreen()))),
+          ButtonWidget1(
+              text: 'Post Api 1',
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PostApiOneScreen()))),
+          ButtonWidget1(
+              text: 'Post Api 2',
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PostApiTwoScreen()))),
         ],
       ),
     );
@@ -23,7 +41,7 @@ class IndexScreen extends StatelessWidget {
 }
 
 class ButtonWidget1 extends StatelessWidget {
-  var onTap;
+  VoidCallback? onTap;
   final String? text;
   final Color? color;
 
@@ -32,13 +50,7 @@ class ButtonWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: text == 'Sign Up' || text == 'Login'
-          ? onTap
-          : () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => onTap));
-              } ??
-              () {},
+      onTap: onTap,
       child: Container(
         alignment: Alignment.center,
         // width: 388,
